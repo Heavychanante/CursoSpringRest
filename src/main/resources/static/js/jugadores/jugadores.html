@@ -1,0 +1,22 @@
+<div class="table-responsive" ng-show="jugadores.length > 0">
+	<table class="table table-striped table-bordered text-center">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Posicion</th>
+				<th>Dorsal</th>
+				<th>Goles</th>
+				<th>Asistencias</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="jugador in jugadores">
+				<td ng-bind="jugador.nombre"></td>
+				<td ng-bind="jugador.posicion"></td>
+				<td ng-bind="jugador.dorsal"></td>
+				<td ng-bind="jugador.goles"></td>
+				<td ng-bind="jugador.asistencias"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

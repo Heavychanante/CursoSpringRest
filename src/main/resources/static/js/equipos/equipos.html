@@ -1,0 +1,23 @@
+<div class="table-responsive" ng-show="equipos.length > 0">
+	<table class="table table-striped table-bordered text-center">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Jugadores</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="equipo in equipos">
+				<td ng-bind="equipo.nombre"></td>
+				<td>
+					<a ui-sref="jugadores({url: equipo._links.jugadores.href})">
+						<button type="button" class="btn btn-default btn-md">
+							<span class="glyphicon glyphicon-share-alt" aria-hidden="true"
+								title="Ver jugadores" style="color: green"></span>
+						</button>
+					</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
