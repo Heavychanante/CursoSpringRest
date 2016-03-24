@@ -9,10 +9,9 @@ import org.springframework.data.rest.core.annotation.RestResource;
 
 import com.curso.springrest.model.Jugador;
 
-@RepositoryRestResource(collectionResourceRel = "jugadores", path = "jugadores")
+@RepositoryRestResource(path = "jugadores", collectionResourceRel = "jugadores")
 public interface JugadorRepository extends PagingAndSortingRepository<Jugador, Integer> {
 
 	@RestResource(path = "findByPosicion", rel = "findByPosicion")
 	Page<Jugador> findByPosicion(@Param("posicion") String posicion, Pageable pageable);
-
 }

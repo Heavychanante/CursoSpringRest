@@ -6,5 +6,6 @@ import com.curso.springrest.model.Equipo;
 
 @Projection(name = "sinCiudad", types = { Equipo.class })
 public interface EquipoProjection {
+
 	String getNombre();
 }

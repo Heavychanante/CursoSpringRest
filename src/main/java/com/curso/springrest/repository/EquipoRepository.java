@@ -6,7 +6,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import com.curso.springrest.model.Equipo;
 import com.curso.springrest.repository.projection.EquipoProjection;
 
-@RepositoryRestResource(collectionResourceRel = "equipos", path = "equipos", excerptProjection = EquipoProjection.class)
+@RepositoryRestResource(path = "equipos", collectionResourceRel = "equipos", excerptProjection = EquipoProjection.class)
 public interface EquipoRepository extends PagingAndSortingRepository<Equipo, Integer> {
 
 }
